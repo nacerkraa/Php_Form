@@ -1,14 +1,15 @@
 <?php
 
  class User{
-    
+    public $username = "nacer";
+    public $email = "nacer@gmail.com";
  }
 
  $userOne = new User();
  $userTwo = new User();
 
- echo('The tyoe of user: ' . get_class($userOne));
- 
+ echo('The tyoe of user: ' . $userOne -> username);
+
 ?>
 
 
