@@ -1,3 +1,17 @@
+<?php
+
+ class User{
+    
+ }
+
+ $userOne = new User();
+ $userTwo = new User();
+
+ echo('The tyoe of user: ' . get_class($userOne));
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +21,5 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo("Hello world!"); ?>
 </body>
 </html>
