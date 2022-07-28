@@ -6,7 +6,7 @@
 
     public function addfrend($name = "Asma")
     {
-        echo('The friend is ' . $name);
+        echo('The friend is ' . $this -> username);
     }
  }
 
