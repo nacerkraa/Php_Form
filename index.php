@@ -2,8 +2,8 @@
 
  class User{
 
-    public $username;
-    public $email;
+    private $username;
+    private $email;
 
     function __construct($username, $email) {
         $this -> username = $username;
