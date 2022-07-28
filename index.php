@@ -3,7 +3,7 @@
  class User{
 
     private $username;
-    private $email;
+    protected $email;
 
     function __construct($username, $email) {
         $this -> username = $username;
@@ -31,6 +31,12 @@
         $this -> email = $email;
         
     }
+
+    public function senMessage()
+    {
+        return $this -> email . 'send a message';
+    }
+
  }
 
  class AdminUser extends User {
@@ -45,6 +51,11 @@
     {
         return $this -> level;
     }
+
+    public function senMessage()
+    {
+        return $this -> email . ' send a message';
+    }
  }
  
 
@@ -53,9 +64,8 @@
  $adminOne = new AdminUser("Admin", "admin@gmail.com",5);
 
 
- echo($userOne -> getName(). "<br/>");
- echo($adminOne -> getEmail(). "<br/>");
- echo($adminOne -> getLevel() . "<br/>");
+ echo($adminOne -> senMessage(). "<br/>");
+
 
 
 
