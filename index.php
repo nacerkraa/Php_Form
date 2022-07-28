@@ -12,7 +12,7 @@
 
     public function getName()
     {
-        return $this -> username;
+        return $this -> username . " Hello friends";
     }
 
     public function setName($username)
@@ -34,25 +34,30 @@
  }
 
  class AdminUser extends User {
+    private $level;
 
+    function __construct($username, $email, $level) {
+        parent:: __construct($username, $email); // super
+        $this -> level = $level;
+    }
+
+    public function getLevel()
+    {
+        return $this -> level;
+    }
  }
  
 
- $userOne = new User("achraf","achraf@gmail.com");
+ $userOne = new User("achraf", "achraf@gmail.com");
 
- $adminOne = new AdminUser("Admin", "admin@gmail.com");
+ $adminOne = new AdminUser("Admin", "admin@gmail.com",5);
 
 
- echo("The Name is : ".$adminOne -> getEmail(). "<br/>");
+ echo($userOne -> getName(). "<br/>");
+ echo($adminOne -> getEmail(). "<br/>");
+ echo($adminOne -> getLevel() . "<br/>");
 
- echo("The Name is : ".$userOne -> getName(). "<br/>");
- $userOne -> setName("nacer");
 
- echo("The Name is : ".$userOne -> getName(). "<br/>");
- $userOne -> setEmail("nacer@gmail.com");
-
- echo("The Name is : ".$userOne -> getEmail(). "<br/>");
- echo("The Email is : ".$userOne -> getEmail());
 
 ?>
 
