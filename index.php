@@ -10,6 +10,11 @@
         $this -> email = $email;
     }
 
+    public function __destruct()
+    {
+        echo($this -> username . " Was removed.. <br/>");
+    }
+
     public function getName()
     {
         return $this -> username . " Hello friends";
@@ -59,12 +64,13 @@
  }
  
 
- $userOne = new User("achraf", "achraf@gmail.com");
+ $userOne = new User("Mikasa", "achraf@gmail.com");
+ $userTwo = new User("Levi", "achraf@gmail.com");
+ $userThree = new User("Marco", "achraf@gmail.com");
 
- $adminOne = new AdminUser("Admin", "admin@gmail.com",5);
 
 
- echo($adminOne -> senMessage(). "<br/>");
+
 
 
 
