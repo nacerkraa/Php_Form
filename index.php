@@ -5,19 +5,26 @@
     public $username;
     public $email;
 
-    function __construct($username) {
+    function __construct($username, $email) {
         $this -> username = $username;
+        $this -> email = $email;
     }
 
-    public function addfrend()
+    public function getName()
     {
         return $this -> username;
     }
+
+    public function getEmail()
+    {
+        return $this -> email;
+    }
  }
 
- $userOne = new User("achraf");
+ $userOne = new User("achraf","achraf@gmail.com");
 
- echo("the name is ".$userOne -> addfrend());
+ echo("The Name is : ".$userOne -> getName(). "<br/>");
+ echo("The Email is : ".$userOne -> getEmail());
 
 ?>
 
