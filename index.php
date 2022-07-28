@@ -1,11 +1,12 @@
 <?php
 
  class User{
+
     public $username;
     public $email;
 
-    function __construct($name) {
-        $this -> $username = $name;
+    function __construct($username) {
+        $this -> username = $username;
     }
 
     public function addfrend()
