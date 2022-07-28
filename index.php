@@ -1,22 +1,25 @@
 <?php
 
  class User{
-    public $username = "nacer";
-    public $email = "nacer@gmail.com";
+    public $username;
+    public $email;
 
-    public function addfrend($name = "Asma")
+    function __construct($name) {
+        $this -> $username = $name;
+    }
+
+    public function addfrend()
     {
-        echo('The friend is ' . $this -> username);
+        return $this -> username;
     }
  }
 
- $userOne = new User();
- $userTwo = new User();
+ $userOne = new User("achraf");
 
- echo('The tyoe of user: ' . $userOne -> username . "<br/>");
- echo($userOne -> addfrend());
+ echo("the name is ".$userOne -> addfrend());
 
 ?>
+
 
 
 <!DOCTYPE html>
