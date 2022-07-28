@@ -68,6 +68,8 @@
  $userTwo = new User("Levi", "achraf@gmail.com");
  $userThree = new User("Marco", "achraf@gmail.com");
 
+ unset($username);
+
 
 
 
