@@ -1,78 +1,15 @@
 <?php
 
- class User{
+class Wether{
+    public static $tempCondition = ["cold", "Rainy", "Hot"];
 
-    private $username;
-    protected $email;
-
-    function __construct($username, $email) {
-        $this -> username = $username;
-        $this -> email = $email;
-    }
-
-    public function __destruct()
+    public static function PrintTemp()
     {
-        echo($this -> username . " Was removed.. <br/>");
+        echo("The state of the wether is :");
     }
+}
 
-    public function getName()
-    {
-        return $this -> username . " Hello friends";
-    }
-
-    public function setName($username)
-    {
-        $this -> username = $username;
-    }
-
-
-    public function getEmail()
-    {
-        return $this -> email;
-    }
-
-    public function setEmail($email)
-    {
-        $this -> email = $email;
-        
-    }
-
-    public function senMessage()
-    {
-        return $this -> email . 'send a message';
-    }
-
- }
-
- class AdminUser extends User {
-    private $level;
-
-    function __construct($username, $email, $level) {
-        parent:: __construct($username, $email); // super
-        $this -> level = $level;
-    }
-
-    public function getLevel()
-    {
-        return $this -> level;
-    }
-
-    public function senMessage()
-    {
-        return $this -> email . ' send a message';
-    }
- }
- 
-
- $userOne = new User("Mikasa", "achraf@gmail.com");
- $userTwo = new User("Levi", "achraf@gmail.com");
- $userThree = new User("Marco", "achraf@gmail.com");
-
- unset($username);
-
-
-
-
+echo Wether::PrintTemp();
 
 
 
