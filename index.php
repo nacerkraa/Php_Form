@@ -15,15 +15,32 @@
         return $this -> username;
     }
 
+    public function setName($username)
+    {
+        $this -> username = $username;
+    }
+
+
     public function getEmail()
     {
         return $this -> email;
     }
+
+    public function setEmail($email)
+    {
+        $this -> email = $email;
+        
+    }
  }
+ 
 
  $userOne = new User("achraf","achraf@gmail.com");
 
  echo("The Name is : ".$userOne -> getName(). "<br/>");
+ $userOne -> setName("nacer");
+ echo("The Name is : ".$userOne -> getName(). "<br/>");
+ $userOne -> setEmail("nacer@gmail.com");
+ echo("The Name is : ".$userOne -> getEmail(). "<br/>");
  echo("The Email is : ".$userOne -> getEmail());
 
 ?>
