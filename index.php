@@ -21,6 +21,7 @@
 </head>
 <body>
     <div class="new-user">
+        <h2>Create a new user</h2>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <label>User Name: </label>
             <input type="text" name="username">

@@ -20,6 +20,10 @@ label{
     color: #666;
 }
 
+h2{
+    color: #666;
+}
+
 input[type="text"],
 input[type="email"]{
     border: 1px solid #ddd;
@@ -31,11 +35,21 @@ input[type="email"]{
 input[type="submit"] {
     margin: 24px auto;
     font-size: 18px;
-    border: none;
-    background-color: coral;
+    border: 1px solid rgb(235, 59, 47);
+    background-color: rgb(235, 59, 47);
     border-radius: 10px;
     color: #fff;
     padding: 6px 16px;
     cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+input:focus {
+    background-color: #FFFF66;
+    border: 1px solid #F47E58;
 }
 
