@@ -21,21 +21,36 @@ class UserValidator {
         }
         $this -> ValidateUserName();
         $this -> ValidateEmail();
+        return $this-> error;
     }
 
     private function ValidateUserName()
     {
-        # code...
+        $val = trim($this -> data["username"]);
+        if (empty($val)) {
+            $this->AddError("username", "username connot be Empty");
+        } else {
+            if (preg_metch('/^[a-zA-Z0-9]{6;12}$/', $val)) {
+                $this-> AddError("username","username name must be 6-12 chars & alphanumeric");
+            }
+        }
     }
 
     private function ValidateEmail()
     {
-        # code...
+        $val = trim($this -> data["email"]);
+        if (empty($val)) {
+            $this->AddError("email", "email connot be Empty");
+        } else {
+            if (filter_var($val, FILTER_VALIDATE_EMAIL)) {
+                $this-> AddError("email","email must be a valide eamil");
+            }
+        }
     }
 
-    private function AddError()
+    private function AddError($key, $val)
     {
-        # code...
+        $this-> errors[$key] = $val;
     }
 }
 

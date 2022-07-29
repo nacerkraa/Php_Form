@@ -1,7 +1,9 @@
 <?php
 
+require('user_validator.php');
+
     if (isset($_POST['submit'])) {
-        echo("The form is submited");  # fire the function
+        $validation = new UserValidator($_POST);
     }
    
 
@@ -25,9 +27,15 @@
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <label>User Name: </label>
             <input type="text" name="username">
+            <div class="error">
+                <?php echo $errors["username"] ?? "" ?>
+            </div>
 
             <label>Email: </label>
             <input type="email" name="email">
+            <div class="error">
+                <?php echo $errors["email"] ?? "" ?>
+            </div>
 
             <input type="submit" value="Submit" name="submit">
         </form>
