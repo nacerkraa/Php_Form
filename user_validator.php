@@ -6,7 +6,7 @@ class UserValidator {
     private $errors = [];
     public static $fields= ['username', 'email'];
 
-    public function __construct()
+    public function __construct($userdata)
     {
          $this -> data = $userdata;
     }
