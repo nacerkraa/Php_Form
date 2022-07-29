@@ -57,5 +57,6 @@ class UserValidator {
     $this->errors[$key] = $val;
   }
 
+  
 }
 ?>
