@@ -1,18 +1,8 @@
 <?php
 
 class Wether{
-    public static $tempCondition = ["cold", "Rainy", "Hot"];
-
-    public static function PrintTemp()
-    {
-        echo("The state of the wether is :");
-    }
+   
 }
-
-echo Wether::PrintTemp();
-
-
-
 
 ?>
 
