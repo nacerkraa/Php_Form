@@ -1,8 +1,10 @@
 <?php
 
-class Wether{
+    if (isset($_POST['submit'])) {
+        echo("The form is submited");  # fire the function
+    }
    
-}
+
 
 ?>
 
@@ -18,12 +20,14 @@ class Wether{
 </head>
 <body>
     <div class="new-user">
-        <form action="" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <label>User Name: </label>
             <input type="text" name="username">
 
             <label>Email: </label>
             <input type="text" name="email">
+
+            <input type="submit" value="Submit" name="submit">
         </form>
     </div>
 </body>
