@@ -1,0 +1,41 @@
+body{
+    background-color: beige;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.new-user{
+    background-color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-radius: 7px;
+}
+
+.new-user input, .new-user label{
+    display: block;
+    margin: 18px auto;
+}
+
+label{
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"]{
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    margin: 24px auto;
+    font-size: 18px;
+    border: none;
+    background-color: coral;
+    border-radius: 10px;
+    color: #fff;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+

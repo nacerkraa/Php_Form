@@ -17,6 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="new-user">
@@ -25,7 +26,7 @@
             <input type="text" name="username">
 
             <label>Email: </label>
-            <input type="text" name="email">
+            <input type="email" name="email">
 
             <input type="submit" value="Submit" name="submit">
         </form>
