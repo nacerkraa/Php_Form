@@ -17,5 +17,14 @@ class Wether{
     <title>Document</title>
 </head>
 <body>
+    <div class="new-user">
+        <form action="" method="post">
+            <label>User Name: </label>
+            <input type="text" name="username">
+
+            <label>Email: </label>
+            <input type="text" name="email">
+        </form>
+    </div>
 </body>
 </html>
