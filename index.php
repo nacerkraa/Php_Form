@@ -5,11 +5,11 @@
   $errors = [];
 
   if(isset($_POST['submit'])){
-    // validate entries
+
     $validation = new UserValidator($_POST);
     $errors = $validation->validateForm();
 
-    // if errors is empty --> save data to db
+
   }
 
 ?>
